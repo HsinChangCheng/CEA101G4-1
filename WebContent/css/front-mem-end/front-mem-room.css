@@ -1,0 +1,55 @@
+	* {
+		font-family: "microSoft jhengHei";
+	}
+	#tableRoomList {
+	  	margin: auto;
+	   	text-align: center;
+	   	font-size: 14px;
+	}
+	a:hover {
+		text-decoration-color: blue !important;
+	}
+	nav > div, #titleAndError {
+	  	width: 90%;
+	  	margin: 0 auto;
+	  	vertical-align: bottom;
+	}
+	nav > div > a {
+	  	text-decoration: none;
+	  	color: black;
+	}
+	nav > div > a:hover {
+	  	text-decoration: none;
+	   	font-size: 1.1rem;
+	}
+	.navbar > div{
+	  	width: 80%;
+	}
+	
+	.roomContent {
+		border-radius: 10px;
+		margin-top: 10px;
+		padding: 10px;
+		box-shadow: 2px 2px 5px #ccc;
+	}
+	.carousel-item {
+ 		width: 100%;
+ 		height: 200px;
+		position: relative;
+	}
+	.carousel-item img {
+		max-width: 100%;
+		over-flow: hidden;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+	.desCol {
+		text-align: justify;
+	}
+	.detailBtn {
+		position: absolute;
+		right: 10%;
+		bottom: 10%;
+	}

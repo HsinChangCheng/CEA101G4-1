@@ -1,0 +1,27 @@
+	* {
+		font-family: "microSoft jhengHei";
+	}
+	#tableRoomList {
+	  	margin: auto;
+	   	text-align: center;
+	   	font-size: 14px;
+	}
+	a:hover {
+		text-decoration-color: blue !important;
+	}
+	nav > div, #titleAndError {
+	  	width: 90%;
+	  	margin: 0 auto;
+	  	vertical-align: bottom;
+	}
+	nav > div > a {
+	  	text-decoration: none;
+	  	color: black;
+	}
+	nav > div > a:hover {
+	  	text-decoration: none;
+	   	font-size: 1.1rem;
+	}
+	.navbar > div{
+	  	width: 80%;
+	}

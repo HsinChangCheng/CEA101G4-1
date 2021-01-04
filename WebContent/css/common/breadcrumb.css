@@ -1,0 +1,33 @@
+.breadcrumb { 
+    list-style: none; 
+}
+
+.breadcrumb > li > a:hover{
+    color: var(--primarycolor);
+}
+
+.breadcrumb > ul{
+    margin-top: 5px;
+}
+
+.breadcrumb li { 
+    padding: 10px;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+.breadcrumb li a {
+    color: black;
+    text-decoration: none; 
+}
+
+.now{
+    color: gray;
+}
+
+@media screen and (max-width: 700px){
+    .breadcrumb li{
+        font-size: 0.8rem;
+    }
+}
+

@@ -1,0 +1,136 @@
+        @font-face {
+            font-family: Minecraft;
+            src: url('fonts/Minecraft-Regular.otf');
+        }
+        body {
+            margin: 0;
+            font-family: "Lato", sans-serif;
+            background-color: #E5E5E5;
+        }
+        #wrapper {
+            padding-left: 200px;
+            /* transition: all 0.4s ease 0s; */
+        }
+        #sidebar-wrapper {
+            margin-left: -250px;
+            left: 250px;
+            width: 188px;
+            background: #333;
+            position: fixed;
+            height: 100%;
+            /* overflow-y: auto; */
+            z-index: 1000;
+            /* transition: all 0.4s ease 0s; */
+            border-right: 1.5px solid #888;
+        }
+        #page-content-wrapper {
+            width: 100%;
+        }
+        .sidebar-nav {
+            position: absolute;
+            top: 0;
+            width: 250px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        #sidebar-wrapper .sidebar-nav span {
+            padding: 8px 8px 8px 32px;
+            width: 160px;
+            height: 35px;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            overflow: hidden;
+            line-height: 35px;
+            transition: height 0.5s;
+            font-family: STKaiti;
+        }
+        #sidebar-wrapper .sidebar-nav span:hover {
+            height: 180px;
+        }
+        #sidebar-wrapper .sidebar-nav span a {
+            display: block;
+            font-size: 14px;
+            /* transition: all 0.8s; */
+            text-decoration: none;
+            color: #818181;
+            /*§Â¶r√C¶‚*/
+            margin-left: 15px;
+            align-self: center;
+            width: 100px;
+        }
+        #sidebar-wrapper .sidebar-nav span a:hover {
+            background-color: gray;
+            /* color: #fff; */
+            color: #f1f1f1;
+        }
+
+
+        #login {
+            width: 120px;
+            height: 35px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #818181;
+            display: block;
+            z-index: 1001;
+            position: absolute;
+            left: 15%;
+            top: 95%;
+        }
+        #leftImg {
+            width: 180px;
+            height: 110px;
+            margin: 10px auto;
+        }
+        #login:hover {
+            color: #f1f1f1;
+        }
+        @media (max-width:767px) {
+            /*         #wrapper {
+            padding-left: 0;
+        } */
+            /*       #sidebar-wrapper {
+                left: 0;
+            } */
+            #wrapper.active {
+                position: relative;
+                left: 250px;
+            }
+            #wrapper.active #sidebar-wrapper {
+                left: 250px;
+                width: 250px;
+                /* transition: all 0.4s ease 0s; */
+            }
+            #leftImg {
+                left: 0;
+            }
+        }
+        a {
+            display: block;
+        }
+
+        .h-100 {
+            background-color: transparent;
+        }
+
+        #tiger {
+            width: 80%;
+            height: 350px;
+            margin-left: 120px;
+
+        }
+
+        #page-content-wrapper {
+
+            /* border: 1px solid red; */
+            transform: translateX(-50%);
+            margin-left: 50%;
+            width: 90%;
+        }
+
+        #sidebarspace {
+            height: 150px;
+            width: 185px;
+        }

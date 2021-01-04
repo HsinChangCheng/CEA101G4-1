@@ -1,0 +1,37 @@
+@charset "UTF8";
+
+body {
+	background-image:
+		url("../../image/mem_center/mem_back.jpg");
+	background-position: center;
+	background-size: cover;
+	
+}
+
+h4 {
+	color: blue;
+	display: inline;
+}
+
+table {
+	width: 500px;
+	  background-color:transparent;
+	margin: 0px auto;
+}
+
+table, th, td {
+	border: 2px solid #FFF;
+	border-style: hidden;
+	outline: none;
+}
+
+th, td {
+	padding: 5px;
+	text-align: center;
+    
+}
+table input{
+	width:300px;
+	  background-color:transparent;
+	  border-style: none;
+}

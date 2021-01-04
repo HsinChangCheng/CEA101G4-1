@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>CEA101G4</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <resource-ref>
+    <description>DB Connection</description>
+    <res-ref-name>jdbc/TestDB</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <servlet>
+    <servlet-name>MemberServlet</servlet-name>
+    <servlet-class>com.member.controller.MemberServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemberServlet</servlet-name>
+    <url-pattern>/member/member.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ActivityPhotoServlet</servlet-name>
+    <servlet-class>com.activity_photo.controller.ActivityPhotoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ActivityPhotoServlet</servlet-name>
+    <url-pattern>/ActivityPhoto/ActivityPhoto.do</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>ActivityProductServlet</servlet-name>
+    <servlet-class>com.activity_product.controller.ActivityProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ActivityProductServlet</servlet-name>
+    <url-pattern>/ActivityProduct/ActivityProduct.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ActivityPeriodServlet</servlet-name>
+    <servlet-class>com.activity_period.controller.ActivityPeriodServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ActivityPeriodServlet</servlet-name>
+    <url-pattern>/ActivityPeriod/ActivityPeriod.do</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>ActivityTypeServlet</servlet-name>
+    <servlet-class>com.activity_type.controller.ActivityTypeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ActivityTypeServlet</servlet-name>
+    <url-pattern>/ActivityType/ActivityType.do</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+		<filter-name>memLoginFilter</filter-name>
+		<filter-class>filter.mem_Login_filter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>memLoginFilter</filter-name>
+		<url-pattern>/front-mem-end/mem/mem_center_page.jsp</url-pattern>
+		<url-pattern>/front-mem-end/mem/listOneMem.jsp</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+		<dispatcher>ASYNC</dispatcher>
+	</filter-mapping>
+	
+<!-- 	昀芷姐姐的XML 沒有之一 -->
+	
+  <servlet>
+		<servlet-name>RoomServlet</servlet-name>
+		<servlet-class>com.room.controller.RoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RoomServlet</servlet-name>
+		<url-pattern>/room/room.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RoomPhotoServlet</servlet-name>
+		<servlet-class>com.roomphoto.controller.RoomPhotoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RoomPhotoServlet</servlet-name>
+		<url-pattern>/roomphoto/roomphoto.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SellServlet</servlet-name>
+		<servlet-class>com.sell.controller.SellServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SellServlet</servlet-name>
+		<url-pattern>/sell/sell.do</url-pattern>
+	</servlet-mapping>
+		
+	<filter>
+		<filter-name>setCharacterEncoding</filter-name>
+		<filter-class>filter.setCharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>setCharacterEncoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	
+	<filter>
+		<filter-name>sellMemLoginFilter</filter-name>
+		<filter-class>filter.sellMemLoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>sellMemLoginFilter</filter-name>
+		<url-pattern>/front-sell-end/sell/*</url-pattern>
+		
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+		<dispatcher>ASYNC</dispatcher>
+	</filter-mapping>
+	
+<!-- 	信彰的XML 沒有之一 -->
+<servlet>
+		<servlet-name>EmpServlet</servlet-name>
+		<servlet-class>com.emp.controller.EmpServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmpServlet</servlet-name>
+		<url-pattern>/emp/emp.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>SouvenirOrderServlet</servlet-name>
+		<servlet-class>com.souvenir_order.controller.SouvenirOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SouvenirOrderServlet</servlet-name>
+		<url-pattern>/souvenir_order/souvenir_order.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmpAuthServlet</servlet-name>
+		<servlet-class>com.emp_auth.controller.EmpAuthServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmpAuthServlet</servlet-name>
+		<url-pattern>/emp_auth/emp_auth.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>NewsServlet</servlet-name>
+		<servlet-class>com.news.controller.NewsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewsServlet</servlet-name>
+		<url-pattern>/news/news.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AuthorizationServlet</servlet-name>
+		<servlet-class>com.authorization.controller.AuthorizationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AuthorizationServlet</servlet-name>
+		<url-pattern>/authorization/authorization.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SouvenirOrderDetailServlet</servlet-name>
+		<servlet-class>com.souvenir_order_detail.controller.SouvenirOrderDetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SouvenirOrderDetailServlet</servlet-name>
+		<url-pattern>/souvenir_order_detail/souvenir_order_detail.do</url-pattern>
+	</servlet-mapping>
+<!-- 繼元的XML 沒有之一 -->
+<servlet>
+		<servlet-name>ReplyServlet</servlet-name>
+		<servlet-class>com.reply.controller.ReplyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReplyServlet</servlet-name>
+		<url-pattern>/reply/reply.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ReplyReportServlet</servlet-name>
+		<servlet-class>com.replyreport.controller.ReplyReportServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReplyReportServlet</servlet-name>
+		<url-pattern>/replyReport/replyReport.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MemRecordServlet</servlet-name>
+		<servlet-class>com.memberrecord.controller.MemRecordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemRecordServlet</servlet-name>
+		<url-pattern>/memberRecord/memberRecord.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SellMemRecordServlet</servlet-name>
+		<servlet-class>com.sellermemberrecord.controller.SellMemRecordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SellMemRecordServlet</servlet-name>
+		<url-pattern>/sellMemberRecord/sellMemberRecord.do</url-pattern>
+	</servlet-mapping>
+<!-- 副組長的XML 沒有之一 -->
+<servlet>
+    <servlet-name>SouvenirProductServlet</servlet-name>
+    <servlet-class>com.souvenir_product.controller.SouvenirProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SouvenirProductServlet</servlet-name>
+    <url-pattern>/souvenir_product/SouvenirProductServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SouvenirTypeServlet</servlet-name>
+    <servlet-class>com.souvenir_type.controller.SouvenirTypeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SouvenirTypeServlet</servlet-name>
+    <url-pattern>/souvenir_type/SouvenirTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SouvenirPhotoServlet</servlet-name>
+    <servlet-class>com.souvenir_photo.controller.SouvenirPhotoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SouvenirPhotoServlet</servlet-name>
+    <url-pattern>/souvenir_photo/SouvenirPhotoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SouvenirProductLikeRecordServlet</servlet-name>
+    <servlet-class>com.souvenir_product_like_record.controller.SouvenirProductLikeRecordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SouvenirProductLikeRecordServlet</servlet-name>
+    <url-pattern>/souvenir_product_like_record/SouvenirProductLikeRecordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SouvenirDiscountDetailServlet</servlet-name>
+    <servlet-class>com.souvenir_discount_detail.controller.SouvenirDiscountDetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SouvenirDiscountDetailServlet</servlet-name>
+    <url-pattern>/souvenir_discount_detail/SouvenirDiscountDetailServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SouvenirDiscountServlet</servlet-name>
+    <servlet-class>com.souvenir_discount.controller.SouvenirDiscountServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SouvenirDiscountServlet</servlet-name>
+    <url-pattern>/souvenir_discount/SouvenirDiscountServlet</url-pattern>
+  </servlet-mapping>
+  
+<!--   蔡同學的XML 沒有之一 -->
+
+
+
+   <servlet>
+    <servlet-name>RoomOrderDetailServlet</servlet-name>
+    <servlet-class>com.roomorderdetail.controller.RoomOrderDetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RoomOrderDetailServlet</servlet-name>
+    <url-pattern>/roomorderdetail/roomorderdetail.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RoomProductCollectServlet</servlet-name>
+    <servlet-class>com.roomproductcollect.controller.RoomProductCollectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RoomProductCollectServlet</servlet-name>
+    <url-pattern>/roomproductcollect/roomproductcollect.do </url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>FoodSpotServlet</servlet-name>
+    <servlet-class>com.foodspot.controller.FoodSpotServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FoodSpotServlet</servlet-name>
+    <url-pattern>/foodspot/foodspot.do </url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>FAQServlet</servlet-name>
+    <servlet-class>com.faq.controller.FAQServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FAQServlet</servlet-name>
+    <url-pattern>/faq/faq.do </url-pattern>
+  </servlet-mapping>
+ 
+	
+
+</web-app>
